@@ -65,3 +65,9 @@ for (let i = 0; i < vetor1.length; i++) {
 for (let fruta of vetor1) {
     console.log('FOR FRUTA É', fruta);
 }
+
+vetor1.forEach(fruta => console.log('FOREACH ARROW: ', fruta));
+
+vetor1.forEach(function (fruta) {
+    console.log('FOREACH FUNCTION: ', fruta);
+});
