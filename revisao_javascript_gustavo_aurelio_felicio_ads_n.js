@@ -215,7 +215,7 @@ let extrairPropriedades = (estado) => {
       // com console.log()
       // Usando a anotação com CRASE
       // (TODO: tem um nome específico)
-      console.log(`Atributo:${atributo}; valor: ${estado[atributo]}`)
+      console.log(`Atributo: ${atributo}; valor: ${estado[atributo]}`)
 }
 
 /* 5) Percorra o vetor estadosNe
@@ -229,11 +229,9 @@ let extrairPropriedades = (estado) => {
 // Que vai listar o atributo e o seu valor
 for (let item of estadosNe) {
    extrairPropriedades(item)
-   // Colocando um traço para separar a visualização de cada estado
-   console.log('----------')
+   // Colocando um tracejado para separar a visualização de cada estado
+   console.log('--------------------')
 }
-
-
 
 /*
    6) 
