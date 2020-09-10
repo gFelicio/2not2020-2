@@ -1,6 +1,6 @@
 let comp = 0
 
-function buscaBinaria (lista, valorBusca, fnComp, inicio, fim) {
+function buscaBinaria (lista, valorBusca, fnComp, inicio = 0, fim = lista.length - 1) {
     if (fim >= inicio) {
         let meio = Math.floor((fim + inicio) / 2)
 
@@ -33,20 +33,20 @@ function comparaNome(obj, valorBusca) {
     }
 }
 
-let numeros = []
-for (let i = 0; i <= 1000; i++) {
-    numeros.push(i);
-}
+// let numeros = []
+// for (let i = 0; i <= 1000; i++) {
+//     numeros.push(i);
+// }
 
-let nums = [4, 16, 22, 29, 35, 44, 52, 58, 66, 71, 80, 88, 94]
+// let nums = [4, 16, 22, 29, 35, 44, 52, 58, 66, 71, 80, 88, 94]
 
-console.log(numeros.length, 'BUSCA BINARIA RECURSIVA', buscaBinaria(numeros, 44, (elPos, busca) => {
-    if (busca == elPos) return 0
-    else if (busca < elPos) return -1
-    else return 1
-}, 0, numeros.length - 1))
+// console.log(numeros.length, 'BUSCA BINARIA RECURSIVA', buscaBinaria(numeros, 44, (elPos, busca) => {
+//     if (busca == elPos) return 0
+//     else if (busca < elPos) return -1
+//     else return 1
+// }))
 
-process.exit(0)
+// process.exit(0)
 
 let listaNomes = require('./dados/lista-nomes')
 
