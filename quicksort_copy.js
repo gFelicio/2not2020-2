@@ -37,9 +37,17 @@ let nums = [54, 81, 72, 36, 9, 90, 63, 27, 18, 45]
 // console.log(nums)
 // console.log({passadas, comparacoes, trocas})
 
-const nomes = require('./dados/100-mil-nomes')
+const nomes = require('./dados/candidatos-2018')
 console.time('NOMES')
-quickSort(nomes, fnComp)
+quickSort(nomes, (a, b) => {
+    // ORdenação considerando primeiro o número do candidato
+    // e DEPOIS o nome do candidato
+    if (a.NR_CANDIDATO == b.NR_CANDIDATO) {
+        if (a.NM_CANDIDATO > b.NM_CANDIDATO) return true
+        else return false
+    } else if (a.NR_CANDIDATO > b.NR_CANDIDATO) return true
+    else return false
+} )
 console.timeEnd('NOMES')
 // console.log('ARRAY DE NOMES', nomes)
 console.log('Memória Usada (MB): ', process.memoryUsage().heapUsed / 1024 / 1024)
